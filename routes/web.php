@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group([
+    'namespace' => 'Web'
+], function() {
+
+    Route::get('posts/{id}', 'PostController@show');
+});
