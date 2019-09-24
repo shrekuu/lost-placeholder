@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layouts.app", ['pageTitle' => $post->title])
 
 @section('styles')
     <link href="{{ mix("/css/pages/posts/show.css") }}" rel="stylesheet">
