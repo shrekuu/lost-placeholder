@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::select(['id', 'title', 'cover', 'user_id'])->get();
+        $posts = Post::select(['id', 'title', 'cover', 'user_id'])->paginate();
         return jsonResponse($posts);
     }
 
