@@ -20,6 +20,6 @@ $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'avatar' => $faker->imageUrl(100, 100)
+        'avatar' => $faker->imageUrl(100, 100, 'cats')
     ];
 });

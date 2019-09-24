@@ -17,7 +17,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
         'content' => $content,
-        'cover' => $faker->imageUrl(300, 300),
+        'cover' => $faker->imageUrl(300, 300, 'city'),
         'user_id' => function () {
             return factory(User::class)->create()->id;
         },
