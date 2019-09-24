@@ -6,13 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $with = ['author'];
 
     public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
