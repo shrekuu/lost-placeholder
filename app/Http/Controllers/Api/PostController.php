@@ -9,13 +9,13 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('user')->select(['title', 'cover'])->paginate();
+        $posts = Post::with('author')->paginate();
         return jsonResponse($posts);
     }
 
     public function show($id)
     {
-        $post = Post::with('user')->find($id);
+        $post = Post::with('author')->find($id);
         return jsonResponse($post);
     }
 }
