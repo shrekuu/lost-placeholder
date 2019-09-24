@@ -26,7 +26,9 @@
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="{{ mix("/js/manifest.js") }}"></script>
-<script src="{{ mix("/js/vendor.js") }}"></script>
+
+{{-- 有 vendor 文件时再引入 --}}
+{{--<script src="{{ mix("/js/vendor.js") }}"></script>--}}
 
 @yield('scripts')
 
