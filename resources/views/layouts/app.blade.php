@@ -15,6 +15,7 @@
     <link href="https://cdn.bootcss.com/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="{{ mix('/css/pages/app.css') }}" rel="stylesheet">
     @yield('styles')
 
 </head>

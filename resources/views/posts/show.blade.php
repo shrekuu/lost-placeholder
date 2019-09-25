@@ -10,7 +10,7 @@
 
         <div class="cover" style="background-image: url({{ $post->cover }});"></div>
 
-        <h3 class="title">{{ $post->title }}</h3>
+        <h3 class="title font-en-serif-zh-sans-serif">{{ $post->title }}</h3>
 
         <div class="author">
             <img class="avatar" src="{{ $post->author->avatar }}">
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="content font-en-serif-zh-sans-serif">
             {!! $post->content !!}
         </div>
 

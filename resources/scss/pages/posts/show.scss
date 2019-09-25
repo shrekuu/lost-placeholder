@@ -13,7 +13,6 @@ body {
     .title {
         margin: 0.39em 15px;
         padding: 15px 0;
-        font-family: medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif;
     }
 
     .author {
@@ -33,15 +32,18 @@ body {
             .nickname {
                 margin-left: 10px;
                 color: rgba(0, 0, 0, 0.84);
+                font-size: 14px;
             }
             .published-at {
                 margin-top: 5px;
                 color: rgba(0, 0, 0, 0.54);
+                font-size: 14px;
             }
         }
     }
 
     .content {
         margin: 10px 15px;
+
     }
 }
