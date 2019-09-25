@@ -17,9 +17,12 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+
+    $avatarKey = random_int(1, 20);
+
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'avatar' => $faker->imageUrl(100, 100, 'cats')
+        'avatar' => "https://placeholdit.projects.linwise.com/v2?dimension=100x100&category=cats&key=$avatarKey"
     ];
 });

@@ -13,10 +13,12 @@ $factory->define(Post::class, function (Faker $faker) {
     // 把每个句子做成段落
     $content = '<p>' . str_replace('.', '.</p><p>', $paragraphs) . '</p>';
 
+    $coverKey = random_int(1, 20);
+
     return [
         'title' => $faker->sentence,
         'content' => $content,
-        'cover' => $faker->imageUrl(300, 300, 'city'),
+        'cover' => "https://placeholdit.projects.linwise.com/v2?dimension=640x480&category=city&key=$coverKey",
         'user_id' => function () {
             return factory(User::class)->create()->id;
         },
