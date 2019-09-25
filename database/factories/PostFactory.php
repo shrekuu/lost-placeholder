@@ -10,9 +10,8 @@ $factory->define(Post::class, function (Faker $faker) {
 
     $paragraphs = $faker->paragraph(20, 20);
 
-    $paragraphs = explode('.', $paragraphs);
-    $paragraphs = join('</p><p>', $paragraphs);
-    $content = '<p>'. $paragraphs . '</p>';
+    // 把每个句子做成段落
+    $content = '<p>' . str_replace('.', '.</p><p>', $paragraphs) . '</p>';
 
     return [
         'title' => $faker->sentence,
