@@ -18,7 +18,7 @@ use Faker\Generator as Faker;
 
 $factory->define(User::class, function (Faker $faker) {
 
-    $avatarKey = random_int(1, 20);
+    $avatarKey = random_int(1, 10);
 
     return [
         'name' => $faker->name,

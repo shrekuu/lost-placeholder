@@ -13,7 +13,7 @@ $factory->define(Post::class, function (Faker $faker) {
     // 把每个句子做成段落
     $content = '<p>' . str_replace('.', '.</p><p>', $paragraphs) . '</p>';
 
-    $coverKey = random_int(1, 20);
+    $coverKey = random_int(1, 10);
 
     return [
         'title' => $faker->sentence,
